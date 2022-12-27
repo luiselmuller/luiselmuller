@@ -1,8 +1,6 @@
 
 # Hi, I'm Luisel! 👋
-<br>
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1500&color=2EF7B5&width=435&lines=Computer+Engineer)](https://git.io/typing-svg)
-
 ## 🚀 About Me
 I'm a Computer Engineering student
 
