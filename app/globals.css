@@ -3,15 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: hsl(229, 84%, 5%);
+  --foreground: hsl(0, 3%, 92%);
+  --primary: hsl(273, 90%, 69%);
+  --secondary: hsl(273, 90%, 81%);
+  --indi: hsl(249, 80%, 63%);  
 }
 
 body {
@@ -24,4 +20,12 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.glow {
+  
+-webkit-box-shadow:0px 0px 105px 45px hsla(273, 90%, 69%, 0.9);
+-moz-box-shadow: 0px 0px 105px 45px hsla(273, 90%, 69%, 0.9);
+box-shadow: 0px 0px 105px 45px rgba(183,105,247,0.9);
+
 }
