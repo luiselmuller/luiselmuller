@@ -4,10 +4,9 @@ import { LampContainer } from "@/components/ui/lamp";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { FlipWords } from "@/components/ui/flip-words";
-import { words } from "@/data/content";
 import { Vortex } from "@/components/ui/vortex";
 import { Timeline } from "@/components/ui/timeline";
-import { experience } from "@/data/content";
+import { experience, words, skills, projects } from "@/data/content";
 
 export default function Home() {
   
@@ -43,21 +42,36 @@ export default function Home() {
       </section>
 
       {/* About section */}
-      <section id="about" className="lg:px-96 md:px-32 px-5">
+      <section id="about" className="lg:px-96 md:px-32 px-5 pt-28">
         <h2 className="bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-3xl font-medium tracking-tight text-transparent md:text-5xl">
           About Me
         </h2>
+        <p>
+        I&apos;m a recent Computer Engineering graduate with hands-on experience in embedded systems, IoT, front-end web development, 
+        and some firmware work. I&apos;m meticulous when it comes to designing and implementing solutions—whether for hardware or software—and 
+        I&apos;m passionate about creating experiences that keep the user front and center.
+          
+        </p>
       </section>
 
       {/* Skills section */}
-      <section id="skills" className="lg:px-96 md:px-32 px-5">
-        <h2 className="bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-3xl font-medium tracking-tight text-transparent md:text-5xl">
-          Skills
+      <section id="skills" className="lg:px-96 md:px-32 px-5 pt-8">
+        <h2 className="bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-xl font-medium tracking-tight text-transparent md:text-2xl">
+          My Skills
         </h2>
+
+        <div className="flex flex-wrap gap-4 ">
+          {skills.map((skill, index) => (
+            <div key={index} className="w-62 h-12 bg-accent rounded-xl flex p-3 items-center justify-center gap-2 bg-indigo-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-60 backdrop-saturate-100 backdrop-contrast-100 bg-[url('data:image/svg+xml;base64,CiAgICAgIDxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpzdmdqcz0iaHR0cDovL3N2Z2pzLmRldi9zdmdqcyIgdmlld0JveD0iMCAwIDcwMCA3MDAiIHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBvcGFjaXR5PSIwLjI2Ij4KICAgICAgICA8ZGVmcz4KICAgICAgICAgIDxmaWx0ZXIgaWQ9Im5ubm9pc2UtZmlsdGVyIiB4PSItMjAlIiB5PSItMjAlIiB3aWR0aD0iMTQwJSIgaGVpZ2h0PSIxNDAlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHByaW1pdGl2ZVVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJsaW5lYXJSR0IiPgogICAgICAgICAgICA8ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC4xMTYiIG51bU9jdGF2ZXM9IjQiIHNlZWQ9IjE1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlc3VsdD0idHVyYnVsZW5jZSI+PC9mZVR1cmJ1bGVuY2U+CiAgICAgICAgICAgIDxmZVNwZWN1bGFyTGlnaHRpbmcgc3VyZmFjZVNjYWxlPSIyMiIgc3BlY3VsYXJDb25zdGFudD0iMC43IiBzcGVjdWxhckV4cG9uZW50PSIyMCIgbGlnaHRpbmctY29sb3I9IiM3OTU3QTgiIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgaW49InR1cmJ1bGVuY2UiIHJlc3VsdD0ic3BlY3VsYXJMaWdodGluZyI+CiAgICAgICAgICAgICAgPGZlRGlzdGFudExpZ2h0IGF6aW11dGg9IjMiIGVsZXZhdGlvbj0iMTAwIj48L2ZlRGlzdGFudExpZ2h0PgogICAgICAgICAgICA8L2ZlU3BlY3VsYXJMaWdodGluZz4KICAgICAgICAgICAgPGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIgeD0iMCUiIHk9IjAlIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBpbj0ic3BlY3VsYXJMaWdodGluZyIgcmVzdWx0PSJjb2xvcm1hdHJpeCI+PC9mZUNvbG9yTWF0cml4PgogICAgICAgICAgPC9maWx0ZXI+CiAgICAgICAgPC9kZWZzPgogICAgICAgIDxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBmaWxsPSJ0cmFuc3BhcmVudCI+PC9yZWN0PgogICAgICAgIDxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBmaWxsPSIjNzk1N2E4IiBmaWx0ZXI9InVybCgjbm5ub2lzZS1maWx0ZXIpIj48L3JlY3Q+CiAgICAgIDwvc3ZnPgogICAg')] bg-blend-overlay">
+              {skill.icon}
+              <span>{skill.name}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Projects section */}
-      <section id="projects" className="lg:px-96 md:px-32 px-5">
+      <section id="projects" className="lg:px-96 md:px-32 px-5 pt-24">
         <h2 className="bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-3xl font-medium tracking-tight text-transparent md:text-5xl">
           Projects
         </h2>
