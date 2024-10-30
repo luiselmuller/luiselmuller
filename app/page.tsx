@@ -12,7 +12,6 @@ import {
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalTrigger,
 } from "@/components/ui/animated-modal";
 

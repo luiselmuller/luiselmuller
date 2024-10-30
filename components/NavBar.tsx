@@ -8,7 +8,6 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { SparklesCore } from "./ui/sparkles";
 
 
 export const NavBar = ({
@@ -28,7 +27,7 @@ export const NavBar = ({
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      const direction = current! - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() > 0.05) {
         setIsScrolled(true);

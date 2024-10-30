@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-import Footer from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import { navItems } from "@/data/content";
 
