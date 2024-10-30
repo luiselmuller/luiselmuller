@@ -38,7 +38,6 @@ export default function RootLayout({
           navItems={navItems}
         />
         {children}
-        {/* <Footer /> */}
       </body>
     </html>
   );

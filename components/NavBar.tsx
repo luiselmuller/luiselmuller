@@ -23,20 +23,21 @@ export const NavBar = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
     if (typeof current === "number") {
       let direction = current! - scrollYProgress.getPrevious()!;
 
-      if (scrollYProgress.get() < 0.05) {
-        // setVisible(false);
+      if (scrollYProgress.get() > 0.05) {
+        setIsScrolled(true);
       } else {
         if (direction < 0) {
-        //  setVisible(true);
+          setIsScrolled(false);
         
         } else {
-        //  setVisible(false);
+          setIsScrolled(true);
         }
       }
     }
@@ -57,7 +58,8 @@ export const NavBar = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-0 inset-x-0 mx-auto border border-transparent z-[5000] items-center justify-center py-5 space-x-10 ",
+          `${isScrolled ? "bg-gray-500 bg-clip-padding backdrop-filter  backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100" : ""}
+          flex w-full fixed top-0 inset-x-0 mx-auto z-[5000] items-center justify-center py-5 space-x-10 transition-all duration-200 ease-in-out`,
           className
         )}
       >
