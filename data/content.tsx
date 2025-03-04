@@ -4,8 +4,8 @@ export const description = "";
 // Words to flip
 export const words = [
     "Computer",
-    "Software",
-    "Embedded",
+    // "Software",
+    // "Embedded",
 ]
 
 export const navItems = [

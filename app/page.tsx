@@ -127,14 +127,16 @@ export default function Home() {
                     <h4 className="text-lg md:text-2xl font-bold text-center mb-8">
                       Contact Form Coming Soon... 🚧
                     </h4>
-                    <a rel="noopener noreferrer" target="_blank" href="/Luisel_Muller_Resume_edit.pdf" className="py-4 text-white hover:cursor-pointer hover:text-primary underline transition-all duration-200 ease-in-out">
+                    {/* RESUME HERE */}
+                    <a rel="noopener noreferrer" target="_blank" href="/" className="py-4 text-white hover:cursor-pointer hover:text-primary underline transition-all duration-200 ease-in-out">
                       In the meantime, you can view my resume.
                     </a>
                   </ModalContent>
                 </ModalBody>
               </Modal>
 
-              <a rel="noopener noreferrer" target="_blank" href="/Luisel_Muller_Resume_edit.pdf" className="py-4 text-white hover:cursor-pointer hover:text-accent transition-all duration-200 ease-in-out">
+              {/* RESUME HERE */}
+              <a rel="noopener noreferrer" target="_blank" href="/" className="py-4 text-white hover:cursor-pointer hover:text-accent transition-all duration-200 ease-in-out">
                 View Resume
               </a>
             </div>
